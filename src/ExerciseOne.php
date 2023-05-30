@@ -23,9 +23,10 @@ final class ExerciseOne
     /**
      * Devolver el texto reemplazando el patrón @[NameUser](user-gpe-identificador) por @NameUser.
      */
-    public function fnB(string $text): string
+    public function fnB(string $text): ?string
     {
         $regex = '/@\[(\S+)]\(user-gpe-\d+\)/';
+
         return preg_replace($regex, '@$1', $text);
     }
 }

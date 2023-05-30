@@ -20,8 +20,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Exercises\\": "src",
-      "Exercises\\Tests\\": "tests"
+      "Exercises\\": "src/",
+      "Exercises\\Tests\\": "tests/"
     }
   },
   "scripts": {
@@ -33,7 +33,7 @@
     ],
     "test": "vendor/bin/phpunit --bootstrap vendor/autoload.php --colors=always tests",
     "psalm": "vendor/bin/psalm --show-info=true",
-    "phpstan": "vendor/bin/phpstan analyse src tests",
+    "phpstan": "vendor/bin/phpstan analyse --level=9 src tests",
     "cs-fix": "vendor/bin/php-cs-fixer fix src --rules=@PSR12"
   }
 }
